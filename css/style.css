@@ -155,9 +155,9 @@ ul {
 }
 
 /* --------media rules--------  */
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 480px) {
   .container {
-    max-width: 320px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -205,7 +205,7 @@ ul {
     text-decoration: underline;
   }
 
-  .btn {
+  .nav-btn {
     width: 98px;
     height: 32px;
     background-color: var(--accent-color);
@@ -230,29 +230,29 @@ ul {
 /* -------hero----- */
 
 .hero {
-  padding: 40px 0 40px 0;
-}
-
-.hero-flex {
-  display: flex;
-  align-items: center;
-  gap: 137px;
-}
-
-.hero-box-text {
-  width: 503px;
+  padding: 60px 0 50px 0;
 }
 
 .hero-title {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: calc(33 / 28);
 
-  margin-bottom: 28px;
+  max-width: 280px;
+
+  margin: 0 auto 28px auto;
 }
 
 .hero-text {
   margin-bottom: 40px;
+}
+
+.hero .btn {
+  width: 98px;
+  height: 32px;
+  background-color: var(--accent-color);
+  border-style: none;
+  border-radius: 30px;
 }
 
 .hero-btn:hover,
@@ -261,148 +261,179 @@ ul {
 }
 
 .hero-img-box {
-  position: relative;
-  width: 580px;
-  height: 580px;
-  border-radius: 50%;
-  overflow: hidden;
+  display: none;
 }
 
-.hero-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 528px;
+@media screen and (min-width: 480px) {
 }
 
-.hero-img-box::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  content: "";
-  background-color: var(--bg-color);
-  width: inherit;
-  height: inherit;
-  border: 26px solid var(--second-bg-color);
-  border-radius: 50%;
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 40px 0 40px 0;
+  }
+
+  .hero-flex {
+    position: relative;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: calc(50 / 42);
+
+    max-width: 537px;
+
+    margin: 0 0 44px 0;
+  }
+
+  .hero-text {
+    max-width: 336px;
+  }
+
+  .hero-img-box {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 89px;
+    right: 32px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .hero-img img {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 292px;
+    height: 292px;
+  }
+
+  .hero-img-box::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    background-color: var(--bg-color);
+    width: inherit;
+    height: inherit;
+    border: 14px solid var(--second-bg-color);
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-flex {
+    position: relative;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    line-height: calc(57 / 42);
+
+    max-width: 502px;
+
+    margin: 119px 0 28px 0;
+  }
+
+  .hero-text {
+    max-width: 502px;
+  }
+
+  .hero-img-box {
+    top: -146px;
+    right: 30px;
+    width: 580px;
+    height: 580px;
+  }
+
+  .hero-img img {
+    width: 528px;
+    height: 528px;
+  }
+
+  .hero-img-box::before {
+    border: 26px solid var(--second-bg-color);
+  }
 }
 
 /* -------about----- */
 
+.about-img-box {
+  max-width: 280px;
+  margin: 0 auto 60px auto;
+}
+
+.about-img {
+  width: 100%;
+}
+
 .about {
-  padding: 40px 0;
-}
+  padding: 40px 0 60px 0;
 
-.about-flex {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 160px;
-}
-
-.about-bg {
-  width: 1280px;
-  height: 824px;
-  position: absolute;
-  display: inline-block;
-  content: "";
-  top: -230px;
-  left: 0;
-  background-color: var(--second-bg-color);
-  background-image: url(../img/bg-01.jpg);
+  background-image: url(../img/mobile-bg-01.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
+  background-size: 100% 100%;
 }
 
 .about-text-box {
-  width: 573px;
 }
 
 .about-title {
   font-weight: 700;
-  font-size: 42px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.about-img-box {
-  position: relative;
-  content: "";
-  width: 550px;
-  height: 550px;
-  margin-left: 100px;
-}
-
-.apple-bg {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--bg-color);
-  width: inherit;
-  height: inherit;
-  border: 26px solid var(--second-bg-color);
-  border-radius: 50%;
-}
-
-.apple-bg::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
-  width: inherit;
-  height: inherit;
-  border: 5px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-}
-
-.about-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  width: 396px;
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  margin-bottom: 28px;
 }
 
 .about-text {
-  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  margin-bottom: 28px;
 }
 .about-list {
-  display: flex;
-  gap: 67px;
 }
+
 .about-item {
-  width: 253px;
+  margin-bottom: 28px;
+}
+
+.about-bg {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+
+  background-color: var(--bg-color);
+  border-radius: 50%;
+
+  margin-bottom: 8px;
 }
 
 .about-item-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background-color: var(--bg-color);
-  border-radius: 50%;
-  margin-bottom: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 32px;
+  height: 32px;
 }
 
 .about .item-title {
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: calc(21 / 18);
   margin-bottom: 16px;
 }
 .about .item-text {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: calc(16 / 14);
   margin-bottom: 32px;
 }
 .about-btn {
@@ -418,6 +449,13 @@ ul {
 .about-btn:focus {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .about {
+    background-image: url(../img/mobile480-bg-01.png);
+    background-size: contain;
+  }
 }
 
 /* -------favorites----- */
