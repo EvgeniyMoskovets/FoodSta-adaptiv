@@ -140,13 +140,29 @@
       <!-- About -->
 
       <section class="about">
-        <div class="container about-flex">          
-          <div class="about-img-box">
-            <img
-              class="about-img"
-              src="./img/aple-mobile.png"
-              alt="aple"
+        
+        <div class="container"> 
+          <div class="about-bg">
+          <picture>           
+              <source media="(min-width: 1280px)" srcset="./img/bg-01.jpg">
+              <source media="(min-width: 768px)" srcset="./img/tablet-bg-01.png">
+              <img 
+              srcset="./img/mobile480-bg-01.png"              
+              src="./img/mobile480-bg-01.png"
+              alt="apple"
             />
+            </picture>
+        </div>         
+          <div class="about-img-box">
+            <picture class="about-img">           
+              <source media="(min-width: 1280px)" srcset="./img/apple.png">
+              <source media="(min-width: 768px)" srcset="./img/apple-tablet.png">
+              <img 
+              srcset="./img/apple-mobile.png"
+              src="./img/apple-mobile.png"
+              alt="apple"
+            />
+            </picture>
           </div>
           <div class="about-text-box">
             <h2 class="about-title" id="About">
@@ -160,7 +176,7 @@
             </p>
             <ul class="about-list list">
               <li class="about-item">
-                <div class="about-bg">
+                <div class="about-icon-bg">
                   <svg class="about-item-icon">
                     <use href="./img/icon.svg#icon-roket"></use>
                   </svg>
@@ -172,7 +188,7 @@
                 </p>
               </li>
               <li class="about-item">
-                <div class="about-bg">
+                <div class="about-icon-bg">
                   <svg class="about-item-icon">
                     <use href="./img/icon.svg#icon-touch"></use>
                   </svg>
@@ -191,7 +207,7 @@
 
       <!-- Favorites -->
 
-      <!-- <section class="favorites">
+      <section class="favorites">
         <div class="container">
           <h2 class="favorites-title">Some of Our Favorites</h2>
           <p class="favorites-tetx">
@@ -230,7 +246,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Reviews -->
 
